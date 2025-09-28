@@ -1265,38 +1265,32 @@
                 }, 600);
             });
 
-            // Sequential fade-in animation
             function startFadeInSequence() {
                 const title = document.getElementById('title');
                 const button = document.getElementById('quoteBtn');
                 const musicBy = document.getElementById('musicBy');
                 const madeBy = document.getElementById('madeBy');
 
-                // Show title first
                 setTimeout(() => {
                     title.classList.add('show');
                 }, 200);
 
-                // Show button after title
                 setTimeout(() => {
                     button.classList.add('show');
                 }, 800);
 
-                // Show credits together
                 setTimeout(() => {
                     musicBy.classList.add('show');
                     madeBy.classList.add('show');
                 }, 1400);
             }
 
-            // Start the sequence when page loads
             startFadeInSequence();
 
         });
     </script>
 
     <script>
-        // Create pixel stars
         function createPixelStars() {
             const numStars = 100;
             const body = document.body;
@@ -1321,3 +1315,4 @@
 </body>
 
 </html>
+
