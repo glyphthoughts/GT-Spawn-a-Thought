@@ -1331,7 +1331,7 @@
 
   const projectName = 'projects/Spawn a Thought';
   
-  const visitsRef = ref(database, `visits/${projectName}`);
+  const visitsRef = ref(database, 'visits/' + projectName.replace('/', '-'));
   
   push(visitsRef, {
     timestamp: Date.now(),
@@ -1339,11 +1339,12 @@
     referrer: document.referrer || 'direct',
     userAgent: navigator.userAgent,
     screenWidth: window.screen.width,
-    screenHeight: window.screen.height
+    screenHeight: window.screen.height,
+    category: projectName.split('/')[0],
+    project: projectName.split('/')[1]
   });
 </script>
 
 </body>
 
 </html>
-
